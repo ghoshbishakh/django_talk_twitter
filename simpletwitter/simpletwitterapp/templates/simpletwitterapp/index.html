@@ -21,6 +21,15 @@
             <center>
                 <h1>Simple Twitter App</h1>
             </center>
+            <hr>
+            {% for tweet in all_tweets %}
+            <p>
+                {{tweet.content}}
+            </p>
+            <br>by {{tweet.username}} | 
+            {{tweet.datetime}}
+            <hr>
+            {% endfor %}
         </section>
     </body>
 </html>
