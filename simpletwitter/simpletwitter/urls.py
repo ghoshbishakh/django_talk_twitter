@@ -22,4 +22,6 @@ from simpletwitterapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('apipage/', views.apipage, name='apipage'),
+    path('api/', views.api, name='api'),
 ]
