@@ -21,6 +21,19 @@
             <center>
                 <h1>Simple Twitter App</h1>
             </center>
+
+            <hr>
+            <h3>Post your tweet</h3>
+            <form action="{% url 'index' %}" method="post">
+                {% csrf_token %}
+                Tweet: <input name="tweetinput" required>
+                <br>
+                Username: <input name="userinput" required>
+                <input type="submit" value="Post">
+            </form>
+            <hr>
+            
+            
             <hr>
             {% for tweet in all_tweets %}
             <p>
